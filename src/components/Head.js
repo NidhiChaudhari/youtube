@@ -42,7 +42,7 @@ return()=>{
    }
    
   return (
-    <div className='grid grid-flow-col m-2 p-2 '>
+    <div className='grid grid-flow-col m-2 p-2'>
     <div className='flex col-span-1'>
    <img alt="icon"   onClick={()=>handleMenuToggle()} src='https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-462145.png?f=webp' className='h-8 cursor-pointer  rounded-3xl mx-2' />
    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png' alt='logo' className='h-8'/>
@@ -50,11 +50,14 @@ return()=>{
     {/* search bar */}
     <div className=' col-span-10'>
    
-      <div className='relative flex items-center '>
+      <div className='relative flex'>
         <input type='text' className='border border-gray-600 rounded-l-full p-1 px-3 w-1/2 mx-0' value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} onFocus={()=>setShowSuggestions(true)} onBlur={()=>setShowSuggestions(false)}/>
         <button className='border border-gray-600 rounded-r-full  px-3  bg-gray-100'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/VisualEditor_-_Icon_-_Search.svg/2048px-VisualEditor_-_Icon_-_Search.svg.png' alt='search' className='w-8'/></button>
         </div>
-        {showSuggestions && <div className=' absolute border border-gray-600 rounded-xl shadow-md bg-white w-[37%] ml-2 '>
+        </div> 
+       
+
+        {showSuggestions && <div className=' absolute border border-gray-600 rounded-xl shadow-lg bg-white w-[37%] ml-2 '>
         <ul className='cursor-pointer'>
             { searchSuggestions.map((s)=>(
                <li key={s} className='py-1 px-3 hover:bg-gray-100 flex items-center'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/VisualEditor_-_Icon_-_Search.svg/2048px-VisualEditor_-_Icon_-_Search.svg.png' alt='search' className='w-7'/>{s}</li>
@@ -63,7 +66,7 @@ return()=>{
         
           </ul>
         </div>}
-        </div>  
+       
        
        
        
